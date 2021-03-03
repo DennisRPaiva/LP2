@@ -41,5 +41,6 @@ class Hello2DFrame extends JFrame {
         g2d.drawRect(225,225, 150,150);
         g2d.drawRect(210,210, 180,180);
         g2d.drawRect(195,195, 210,210);
+        
     }
 }
