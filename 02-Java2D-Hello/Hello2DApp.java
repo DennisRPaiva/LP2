@@ -26,7 +26,7 @@ class Hello2DFrame extends JFrame {
 
     public void paint (Graphics g) {
         super.paint(g);
-        g.setColor(Color.BLACK);
+        g.setColor(Color.BLUE);
         g.fillRect(0, 0, getWidth(), getHeight());
         Graphics2D g2d = (Graphics2D) g;
         g2d.setPaint(Color.orange);
