@@ -2,8 +2,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import Packagee.figures.Ellipse;
-import Packagee.figures.Rect;
+import figures.Ellipse;
+import figures.Rect;
 
 class PackApp {
     public static void main (String[] args) {
