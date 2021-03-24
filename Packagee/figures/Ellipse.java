@@ -1,4 +1,4 @@
-package Packagee.figures;
+package figures;
 
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
@@ -20,8 +20,12 @@ public class Ellipse {
             this.w, this.h, this.x, this.y);
     }
 
-    public void paint (Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
+    public void paint (Graphics gra, int r1,int g1, int b1,int r2,int g2, int b2) {
+        Graphics2D g2d = (Graphics2D) gra;
+        g2d.setColor(new Color(r1,g1,b1));
         g2d.draw(new Ellipse2D.Double(this.x,this.y, this.w,this.h));
+        g2d.setColor(new Color(r2,g2,b2));
+        g2d.fillOval(this.x, this.y, this.w, this.h);
+        //g2d.draw(new Ellipse2D.Double(this.x,this.y, this.w,this.h));
     }
 }
