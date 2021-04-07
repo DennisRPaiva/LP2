@@ -14,8 +14,8 @@ class ListApp {
 }
 
 class ListFrame extends JFrame {
-    ArrayList<Figure> figsRect = new ArrayList<Figure>();
-    ArrayList<Figure> figsElls = new ArrayList<Figure>();
+    ArrayList<Figure> figs = new ArrayList<Figure>();
+    //ArrayList<Figure> figsElls = new ArrayList<Figure>();
     Random rand = new Random();
 
     ListFrame () {
@@ -36,10 +36,10 @@ class ListFrame extends JFrame {
                     int h = rand.nextInt(50);
                     if (evt.getKeyChar() == 'r') {
                         Rect r = new Rect(x,y, w,h);
-                        figsRect.add(r);
+                        figs.add(r);
                     } else if (evt.getKeyChar() == 'e') {
                         Ellipse e = new Ellipse(x,y, w,h);
-                        figsElls.add(e);
+                        figs.add(e);
                     }
                     repaint();
                 }
@@ -52,11 +52,11 @@ class ListFrame extends JFrame {
 
     public void paint (Graphics g) {
         super.paint(g);
-        for (Figure figsRect: this.figsRect) {
-            figsRect.paint(g);
+        for (Figure figs: this.figs) {
+            figs.paint(g);
         }
-        for (Figure figsElls: this.figsElls) {
-            figsElls.paint(g);
-        }
+        //for (Figure figsElls: this.figsElls) {
+        //    figsElls.paint(g);
+        //}
     }
 }
