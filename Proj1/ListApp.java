@@ -42,7 +42,8 @@ class ListFrame extends JFrame {
                     int w = rand.nextInt(50);
                     int h = rand.nextInt(50);
                     if (evt.getKeyChar() == 'r') {
-                        Rect r = new Rect(x,y, w,h);
+                        //Rect r = new Rect(x,y, w,h);
+                        Rect r = new Rect(mouse.getX(),mouse.getY(), w,h);
                         figs.add(r);
                         r.print();
                     } 
