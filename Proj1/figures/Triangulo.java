@@ -15,6 +15,6 @@ public class Triangulo extends Figure {
 
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        g2d.drawPolygon(new int[]{this.x,this.width,(this.x + 50)},new int[]{this.height,this.width,this.x}, 3);
+        g2d.drawPolygon(new int[]{this.x,(this.x+25),(this.x + 50)},new int[]{this.y,(this.y-50),this.y}, 3);
     }
 }
