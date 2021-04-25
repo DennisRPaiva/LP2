@@ -195,6 +195,28 @@ class ListFrame extends JFrame {
                         Pentaguno p = new Pentaguno(x, y, width, height, Color.black,new Color(0,0,0,0));
                         figs.add(p);
                     }
+
+                    else if (evt.getKeyChar() == '+') {
+                        //aumenta a figura
+						for(Figure fig: figs){
+							if(focus == fig){
+								fig.reSize(1,1);
+								foco.reSize(1,1);
+								repaint();
+							}
+						}
+                    }
+
+                    else if (evt.getKeyChar() == '-') {
+                        //diminui a figura
+						for(Figure fig: figs){
+							if(focus == fig){
+								fig.reSize(-1,-1);
+								foco.reSize(-1,-1);
+								repaint();
+							}
+						}
+                    }
                    
 
                     //remove
